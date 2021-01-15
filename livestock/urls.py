@@ -15,6 +15,8 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 
 
+
+
 router = routers.SimpleRouter()
 router.register(r'usuarios', UsuarioViewSet)
 router.register(r'usuarios_agrupamentos', Usuario_AgrupamentoViewSet)
@@ -31,5 +33,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api-token-auth/', obtain_auth_token)
+    path('api-token-auth/', obtain_auth_token),
+    path('rest_auth/', include('rest_auth.urls')),
+    path('rest_auth/registration/', include('rest_auth.registration.urls'))
 ]
