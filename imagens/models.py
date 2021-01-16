@@ -8,3 +8,6 @@ class Imagens(models.Model):
     
     def __str__(self):
         return self.path
+
+    def animal(self):
+        return self.cod_animal.descricao

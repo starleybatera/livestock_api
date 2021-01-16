@@ -4,6 +4,8 @@ from animais.models import Animal
 
 
 class ImagensSerializer(serializers.ModelSerializer):
+
+    animal = serializers.ReadOnlyField()
     class Meta:
         model = Imagens
-        fields = ['id', 'path', 'cod_animal']
+        fields = ['id', 'path', 'animal']
