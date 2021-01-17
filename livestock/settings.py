@@ -27,11 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
-    # apps do Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    # apps do rest_framework
+    # Apps Restful 
     'rest_framework',
     'rest_framework.authtoken',
     'allauth',
@@ -47,7 +45,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
     'allauth.socialaccount',
-    # apps da aplicação livestock
+    # Apps aplicação livestock
     'usuario',
     'usuario_agrupamento',
     'agrupamentos',

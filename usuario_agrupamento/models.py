@@ -9,3 +9,9 @@ class Usuario_Agrupamento(models.Model):
 
     def __str__(self):
         return self.cod_usuario
+
+    def usuario(self):
+        return self.cod_usuario.nome
+
+    def agrupamento(self):
+        return self.cod_agrupamento.identificacao

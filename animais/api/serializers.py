@@ -9,7 +9,9 @@ class AnimalSerializer(serializers.ModelSerializer):
     raca = serializers.ReadOnlyField()
     agrupamento = serializers.ReadOnlyField()
     historico = serializers.ReadOnlyField()
+    data_historico = serializers.ReadOnlyField()
+
     class Meta:
         model = Animal
-        fields = ['id', 'identificacao', 'descricao','agrupamento','raca','historico']
+        fields = ['id', 'identificacao', 'descricao','raca','agrupamento','historico','data_historico']
         

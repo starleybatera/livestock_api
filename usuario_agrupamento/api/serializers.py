@@ -6,7 +6,10 @@ from agrupamentos.models import Agrupamento
 
 
 class Usuario_AgrupamentoSerializer(serializers.ModelSerializer):
+    usuario = serializers.ReadOnlyField()
+    agrupamento = serializers.ReadOnlyField()
+
     class Meta:
         model = Usuario_Agrupamento
-        fields = ['id', 'cod_usuario', 'cod_agrupamento']
+        fields = ['id', 'usuario', 'agrupamento']
 

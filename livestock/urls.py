@@ -15,8 +15,6 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 
 
-
-
 router = routers.SimpleRouter()
 router.register(r'usuarios', UsuarioViewSet)
 router.register(r'usuarios_agrupamentos', Usuario_AgrupamentoViewSet)
