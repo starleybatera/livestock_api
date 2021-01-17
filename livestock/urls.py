@@ -1,6 +1,8 @@
 
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings 
 from rest_framework import routers
 from usuario.api.viewset import UsuarioViewSet
 from usuario_agrupamento.api.viewset import Usuario_AgrupamentoViewSet
@@ -34,4 +36,4 @@ urlpatterns = [
     path('api-token-auth/', obtain_auth_token),
     path('rest_auth/', include('rest_auth.urls')),
     path('rest_auth/registration/', include('rest_auth.registration.urls'))
-]
+]   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
