@@ -9,5 +9,4 @@ class Historico(models.Model):
     def __str__(self):
         return self.descricao
 
-    def tipo_historico(self):
-        return self.cod_tipo.descricao
+  

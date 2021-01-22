@@ -13,15 +13,5 @@ class Animal(models.Model):
     def __str__(self):
         return self.identificacao
 
-    def raca(self):
-        return self.cod_raca.descricao
     
-    def agrupamento(self):
-        return self.cod_agrupamento.identificacao
-    
-    def historico(self):
-        return self.cod_historico.descricao
-
-    def data_historico(self):
-        return self.cod_historico.data
 
